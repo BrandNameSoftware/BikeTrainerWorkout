@@ -1,0 +1,13 @@
+package com.hudl.workout;
+
+public class WorkoutGenerator {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

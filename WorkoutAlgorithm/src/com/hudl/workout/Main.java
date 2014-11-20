@@ -1,5 +1,8 @@
 package com.hudl.workout;
 
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -15,7 +18,12 @@ public class Main {
 	 */
 	public static void main(String[] args)
 	{
-		HashMap<Integer, WorkoutConstraints> constraints = ImportPrefs.ReadWorkoutconstraints();
+		HashMap<Integer, WorkoutConstraints> constraints = new HashMap<Integer, WorkoutConstraints>();
+		try {
+			constraints = ImportPrefs.ReadWorkoutconstraints(new FileInputStream("Config/WorkoutConfig"));
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		}
 		WorkoutPrefs prefs = ImportPrefs.ReadWorkoutPrefs();
 		
 		WorkoutGenerator generator = new WorkoutGenerator(constraints, prefs);

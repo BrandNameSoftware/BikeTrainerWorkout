@@ -1,0 +1,38 @@
+package com.hudl.myfirstapp;
+
+import java.util.ArrayList;
+
+import com.hudl.workout.datacontainer.WorkoutSet;
+
+import android.os.CountDownTimer;
+
+public class WorkoutCountDownTimer extends CountDownTimer {
+
+	ArrayList<WorkoutSet> mainSet = new ArrayList<WorkoutSet>();
+	
+	public WorkoutCountDownTimer(long millisInFuture, long countDownInterval) {
+		super(millisInFuture, countDownInterval);
+		// TODO Auto-generated constructor stub
+	}
+
+	@Override
+	public void onTick(long millisUntilFinished) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void onFinish() {
+		// TODO Auto-generated method stub
+
+	}
+
+	public ArrayList<WorkoutSet> getMainSet() {
+		return mainSet;
+	}
+
+	public void setMainSet(ArrayList<WorkoutSet> mainSet) {
+		this.mainSet = mainSet;
+	}
+
+}

@@ -13,6 +13,7 @@
 <fullyQualifiedTypeName name="java.lang.System"/>
 <fullyQualifiedTypeName name="java.lang.Math"/>
 <fullyQualifiedTypeName name="com.hudl.workout.datacontainer.WorkoutConstraints"/>
-<fullyQualifiedTypeName name="com.hudl.workout.utils.WorkoutMaths"/>
+<fullyQualifiedTypeName name="java.util.HashMap"/>
 <fullyQualifiedTypeName name="com.hudl.workout.datacontainer.WorkoutSet"/>
+<fullyQualifiedTypeName name="com.hudl.workout.utils.WorkoutMaths"/>
 </qualifiedTypeNameHistroy>

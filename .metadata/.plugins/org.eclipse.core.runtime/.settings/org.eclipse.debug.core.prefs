@@ -2,4 +2,4 @@
 //org.eclipse.debug.core.PREFERRED_DELEGATES/org.eclipse.cdt.launch.attachLaunchType=org.eclipse.cdt.dsf.gdb.launch.attachCLaunch,debug
 //org.eclipse.debug.core.PREFERRED_DELEGATES/org.eclipse.cdt.launch.postmortemLaunchType=org.eclipse.cdt.dsf.gdb.launch.coreCLaunch,debug
 eclipse.preferences.version=1
-prefWatchExpressions=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?>\r\n<watchExpressions>\r\n<expression enabled\="true" text\="(this.workoutPrefs.getTime() - this.totalTimePerZone.get(this.workoutPrefs.getZone()))"/>\r\n</watchExpressions>\r\n
+prefWatchExpressions=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?>\r\n<watchExpressions>\r\n<expression enabled\="true" text\="currentRepTime - (timeLeftExcludingCurrentRep - Long.valueOf(millisUntilFinished))"/>\r\n<expression enabled\="true" text\="currentRepTime.toString()"/>\r\n<expression enabled\="true" text\="timeLeftExcludingCurrentRep.toString()"/>\r\n<expression enabled\="true" text\="Long.valueOf(millisUntilFinished).toString()"/>\r\n<expression enabled\="true" text\="(timeLeftExcludingCurrentRep - Long.valueOf(millisUntilFinished))"/>\r\n</watchExpressions>\r\n

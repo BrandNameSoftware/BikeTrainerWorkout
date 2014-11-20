@@ -1,6 +1,8 @@
 package com.hudl.workout.datacontainer;
 
-public class WorkoutConstraints {
+import java.io.Serializable;
+
+public class WorkoutConstraints implements Serializable {
 	private int zone;
 	private String description;
 	private int minReps;

@@ -1,9 +1,12 @@
 package com.hudl.workout.datacontainer;
 
-public class WorkoutPrefs {
+import java.io.Serializable;
+
+public class WorkoutPrefs implements Serializable {
 
 	private int zone;
 	private int time;
+	
 	public int getZone() {
 		return zone;
 	}

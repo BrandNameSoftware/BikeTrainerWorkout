@@ -1,8 +1,8 @@
 package com.hudl.workout;
 
 import java.io.BufferedReader;
-import java.io.FileReader;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.HashMap;
 
@@ -10,15 +10,16 @@ import com.hudl.workout.datacontainer.WorkoutConstraints;
 import com.hudl.workout.datacontainer.WorkoutPrefs;
 
 public class ImportPrefs {
-	public static HashMap<Integer, WorkoutConstraints> ReadWorkoutconstraints()
+	public static HashMap<Integer, WorkoutConstraints> ReadWorkoutconstraints(InputStream inputStream)
 	{
 		HashMap<Integer, WorkoutConstraints> workouts = new HashMap<Integer, WorkoutConstraints>();
+
 		BufferedReader br = null;
 		try
 		{
 			String sCurrentLine;
- 
-			br = new BufferedReader(new FileReader("Config/WorkoutConfig"));
+			
+			br = new BufferedReader(new InputStreamReader(inputStream));
  
 			int lineCount = 0;
 			while ((sCurrentLine = br.readLine()) != null)
@@ -88,7 +89,7 @@ public class ImportPrefs {
 		}*/
 
 		workoutPrefs.setTime(3600);
-		workoutPrefs.setZone(3);
+		workoutPrefs.setZone(2);
 		
 		return workoutPrefs;
 	}

@@ -1,6 +1,8 @@
 package com.hudl.workout.datacontainer;
 
-public class WorkoutSet
+import java.io.Serializable;
+
+public class WorkoutSet implements Serializable
 {
 	private int numberOfReps;
 	private int timePerRep;

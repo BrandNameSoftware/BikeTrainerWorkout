@@ -1,0 +1,70 @@
+package com.hudl.workout;
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.ArrayList;
+
+public class ImportPrefs {
+	public static ArrayList<WorkoutConstraints> ReadWorkoutconstraints()
+	{
+		ArrayList<WorkoutConstraints> workouts = new ArrayList<WorkoutConstraints>();
+		BufferedReader br = null;
+		try
+		{
+			String sCurrentLine;
+ 
+			br = new BufferedReader(new FileReader("Config/WorkoutConfig"));
+ 
+			int lineCount = 0;
+			while ((sCurrentLine = br.readLine()) != null)
+			{
+				if(lineCount != 0)
+				{
+					WorkoutConstraints currentInfo = populateWorkoutInfoObject(sCurrentLine);
+					workouts.add(currentInfo);
+				}
+				lineCount++;
+			}
+ 
+		} catch (IOException e)
+		{
+			e.printStackTrace();
+		}
+		finally
+		{
+			try
+			{
+				if (br != null)
+				{
+					br.close();
+				}
+			}
+			catch (IOException ex)
+			{
+				ex.printStackTrace();
+			}
+		}
+		return workouts;
+	}
+
+	private static WorkoutConstraints populateWorkoutInfoObject(String sWorkoutInfo)
+	{
+		WorkoutConstraints workoutInfo = new WorkoutConstraints();
+		String[] workoutVals = sWorkoutInfo.split(",");
+		workoutInfo.setZone(Integer.parseInt(workoutVals[0]));
+		workoutInfo.setDescription(workoutVals[1]);
+		workoutInfo.setMinReps(Integer.parseInt(workoutVals[2]));
+		workoutInfo.setMaxReps(Integer.parseInt(workoutVals[3]));
+		workoutInfo.setMinRepTime(Integer.parseInt(workoutVals[4]));
+		workoutInfo.setMaxReps(Integer.parseInt(workoutVals[5]));
+		workoutInfo.setTargetRPM(Integer.parseInt(workoutVals[6]));
+		workoutInfo.setMinPower(Integer.parseInt(workoutVals[7]));
+		workoutInfo.setMaxPower(Integer.parseInt(workoutVals[8]));
+		workoutInfo.setMinHR(Integer.parseInt(workoutVals[9]));
+		workoutInfo.setMaxHR(Integer.parseInt(workoutVals[10]));
+		workoutInfo.setRestRatio(Double.parseDouble(workoutVals[11]));
+		workoutInfo.setMaxSetTimePerWorkout(Integer.parseInt(workoutVals[12]));
+		return workoutInfo;
+	}
+}

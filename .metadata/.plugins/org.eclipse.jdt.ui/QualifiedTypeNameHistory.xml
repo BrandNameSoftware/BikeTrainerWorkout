@@ -4,8 +4,15 @@
 <fullyQualifiedTypeName name="android.content.Intent"/>
 <fullyQualifiedTypeName name="android.widget.EditText"/>
 <fullyQualifiedTypeName name="com.hudl.myfirstapp.R.id"/>
-<fullyQualifiedTypeName name="java.lang.Integer"/>
-<fullyQualifiedTypeName name="java.lang.System"/>
-<fullyQualifiedTypeName name="com.hudl.workout.WorkoutInfo"/>
 <fullyQualifiedTypeName name="com.hudl.workout.ImportPrefs"/>
+<fullyQualifiedTypeName name="com.hudl.workout.WorkoutInfo"/>
+<fullyQualifiedTypeName name="java.lang.Integer"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="com.hudl.workout.datacontainer.WorkoutPrefs"/>
+<fullyQualifiedTypeName name="com.hudl.workout.WorkoutGenerator"/>
+<fullyQualifiedTypeName name="java.lang.System"/>
+<fullyQualifiedTypeName name="java.lang.Math"/>
+<fullyQualifiedTypeName name="com.hudl.workout.datacontainer.WorkoutConstraints"/>
+<fullyQualifiedTypeName name="com.hudl.workout.utils.WorkoutMaths"/>
+<fullyQualifiedTypeName name="com.hudl.workout.datacontainer.WorkoutSet"/>
 </qualifiedTypeNameHistroy>

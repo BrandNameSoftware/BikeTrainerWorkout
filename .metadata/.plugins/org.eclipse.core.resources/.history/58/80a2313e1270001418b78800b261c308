@@ -1,0 +1,17 @@
+package com.hudl.workout;
+
+import com.hudl.workout.datacontainer.WorkoutPrefs;
+
+public class Main {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args)
+	{
+		ImportPrefs.ReadWorkoutconstraints();
+		WorkoutPrefs pref = ImportPrefs.ReadWorkoutPrefs();
+		
+	}
+
+}

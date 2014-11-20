@@ -1,0 +1,55 @@
+package com.hudl.workout;
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.ArrayList;
+
+public class ImportPrefs {
+	public static ArrayList<WorkoutInfo> ReadWorkoutPrefs()
+	{
+		ArrayList<WorkoutInfo> workouts = new ArrayList<WorkoutInfo>();
+		BufferedReader br = null;
+		try
+		{
+			String sCurrentLine;
+ 
+			br = new BufferedReader(new FileReader("Config/WorkoutConfig"));
+ 
+			int lineCount = 0;
+			while ((sCurrentLine = br.readLine()) != null)
+			{
+				if(lineCount != 0)
+				{
+					WorkoutInfo currentInfo = populateWorkoutInfoObject(sCurrentLine);
+					workouts.add(currentInfo);
+				}
+				lineCount++;
+			}
+ 
+		} catch (IOException e)
+		{
+			e.printStackTrace();
+		}
+		finally
+		{
+			try
+			{
+				if (br != null)
+				{
+					br.close();
+				}
+			}
+			catch (IOException ex)
+			{
+				ex.printStackTrace();
+			}
+		}
+		return null;
+	}
+
+	private static WorkoutInfo populateWorkoutInfoObject(String workoutInfo) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+}

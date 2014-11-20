@@ -1,0 +1,27 @@
+package com.hudl.workout;
+
+import java.util.ArrayList;
+
+public class WorkoutGenerator
+{
+	private ArrayList<WorkoutConstraints> workoutConstraints;
+
+	private WorkoutGenerator()
+	{
+		
+	}
+	
+	public WorkoutGenerator(ArrayList<WorkoutConstraints> workoutConstraints)
+	{
+		this.workoutConstraints = workoutConstraints;
+	}
+	
+	public ArrayList<WorkoutConstraints> getWorkoutConstraints() {
+		return workoutConstraints;
+	}
+
+	public void setWorkoutConstraints(ArrayList<WorkoutConstraints> workoutConstraints) {
+		this.workoutConstraints = workoutConstraints;
+	}
+	
+}

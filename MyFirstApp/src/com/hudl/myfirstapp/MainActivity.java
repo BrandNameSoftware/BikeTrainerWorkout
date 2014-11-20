@@ -39,8 +39,8 @@ public class MainActivity extends ActionBarActivity {
     
     public void startWorkout(View view)
     {
-    	Intent intent = new Intent(this, DisplayMessageActivity.class);
+    	/*Intent intent = new Intent(this, DisplayMessageActivity.class);
     	EditText txtWorkoutTime = (EditText) findViewById(R.id.txtBoxTimeForWorkout);
-    	Integer workout
+    	Integer workout*/
     }
 }

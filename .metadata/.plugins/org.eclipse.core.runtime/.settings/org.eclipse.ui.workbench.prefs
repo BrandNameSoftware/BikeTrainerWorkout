@@ -31,4 +31,5 @@ org.eclipse.team.cvs.ui.fontsandcolors.ignored_resource_background_color=52,52,5
 org.eclipse.team.cvs.ui.fontsandcolors.ignored_resource_foreground_color=244,244,244
 org.eclipse.team.cvs.ui.fontsandcolors.outgoing_change_background_color=52,52,52
 org.eclipse.team.cvs.ui.fontsandcolors.outgoing_change_foreground_color=244,244,244
+org.eclipse.ui.commands=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<org.eclipse.ui.commands>\r\n<keyBinding contextId\="org.eclipse.ui.contexts.dialogAndWindow" keyConfigurationId\="org.eclipse.ui.defaultAcceleratorConfiguration" keySequence\="CTRL+INSERT"/>\r\n<keyBinding contextId\="org.eclipse.ui.contexts.dialogAndWindow" keyConfigurationId\="org.eclipse.ui.defaultAcceleratorConfiguration" keySequence\="CTRL+INSERT"/>\r\n</org.eclipse.ui.commands>
 org.eclipse.wst.jsdt.ui.ColoredLabels.inherited=108,108,255

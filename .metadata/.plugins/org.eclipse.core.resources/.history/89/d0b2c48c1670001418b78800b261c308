@@ -1,0 +1,83 @@
+package com.hudl.workout;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Random;
+
+import com.hudl.workout.datacontainer.WorkoutConstraints;
+import com.hudl.workout.datacontainer.WorkoutPrefs;
+import com.hudl.workout.datacontainer.WorkoutSet;
+import com.hudl.workout.utils.WorkoutMaths;
+
+public class WorkoutGenerator
+{
+	//inputs
+	private HashMap<Integer, WorkoutConstraints> workoutConstraints;
+	private WorkoutPrefs workoutPrefs;
+	
+	//generated data
+	private static double bonusRoundPercentage = .15;
+	private int minutesInTargetZone;
+
+
+	public WorkoutGenerator(HashMap<Integer, WorkoutConstraints> workoutConstraints, WorkoutPrefs workoutPrefs)
+	{
+		this.workoutConstraints = workoutConstraints;
+		this.workoutPrefs = workoutPrefs;
+	}
+
+	public ArrayList<WorkoutSet> generateMainSet()
+	{
+		ArrayList<WorkoutSet> mainSets = new ArrayList<WorkoutSet>();
+		this.minutesInTargetZone = (int) Math.round(this.workoutPrefs.getTime() * (1-bonusRoundPercentage));
+		
+		int remainingTimeInWorkout = this.workoutPrefs.getTime();
+		
+		WorkoutConstraints targetZone = this.workoutConstraints.get(this.workoutPrefs.getZone());
+		
+		while(remainingTimeInWorkout >= targetZone.getMinRepTime())
+		{
+			int numberOfReps, timePerRep, restTimePerRep, totalSetWorkoutTime;
+			
+			numberOfReps = WorkoutMaths.randInt(targetZone.getMinReps(), targetZone.getMaxReps());
+			timePerRep = WorkoutMaths.randInt(targetZone.getMinRepTime(), targetZone.getMaxRepTime());
+			restTimePerRep = (int) Math.round(timePerRep * targetZone.getRestRatio());
+			totalSetWorkoutTime = numberOfReps * (timePerRep + restTimePerRep);
+		}
+		
+		
+		return mainSets;
+	}
+	
+	public HashMap<Integer, WorkoutConstraints> getWorkoutConstraints() {
+		return workoutConstraints;
+	}
+
+	public void setWorkoutConstraints(HashMap<Integer, WorkoutConstraints> workoutConstraints) {
+		this.workoutConstraints = workoutConstraints;
+	}
+	
+	public WorkoutPrefs getWorkoutPrefs() {
+		return workoutPrefs;
+	}
+
+	public void setWorkoutPrefs(WorkoutPrefs workoutPrefs) {
+		this.workoutPrefs = workoutPrefs;
+	}
+
+	public static double getBonusRoundPercentage() {
+		return bonusRoundPercentage;
+	}
+
+	public static void setBonusRoundPercentage(double bonusRoundPercentage) {
+		WorkoutGenerator.bonusRoundPercentage = bonusRoundPercentage;
+	}
+
+	public int getMinutesInTargetZone() {
+		return minutesInTargetZone;
+	}
+
+	public void setMinutesInTargetZone(int minutesInTargetZone) {
+		this.minutesInTargetZone = minutesInTargetZone;
+	}
+}

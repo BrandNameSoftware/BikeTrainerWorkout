@@ -1,7 +1,6 @@
 package com.hudl.myfirstapp;
 
 import java.io.IOException;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -12,6 +11,7 @@ import android.os.CountDownTimer;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.GridView;
 import android.widget.TextView;
 
 import com.hudl.workout.ImportPrefs;
@@ -19,10 +19,10 @@ import com.hudl.workout.WorkoutGenerator;
 import com.hudl.workout.datacontainer.WorkoutConstraints;
 import com.hudl.workout.datacontainer.WorkoutPrefs;
 import com.hudl.workout.datacontainer.WorkoutSet;
+import com.hudl.workout.utils.WorkoutMaths;
 
 public class DisplayWorkoutActivity extends ActionBarActivity
 {
-
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -37,8 +37,11 @@ public class DisplayWorkoutActivity extends ActionBarActivity
 		TextView totalCounTextView = (TextView) findViewById(R.id.txtViewTotalCountdown);
 		totalCounTextView.setText(Integer.toString(workoutPrefs.getTime()));
 
-		TextView setCountTextView = (TextView) findViewById(R.id.txtViewSetCountdown);
-		setCountTextView.setText(Integer.toString(mainSets.get(0).getTotalSetTime()));
+		GridView gridViewWorkouts = (GridView) findViewById(R.id.gridViewWorkoutSets);
+		gridViewWorkouts.setAdapter(new WorkoutAdapter(this, mainSets, workoutConstraints));
+
+		/*TextView setCountTextView = (TextView) findViewById(R.id.txtViewRepCountdown);
+		setCountTextView.setText(Integer.toString(mainSets.get(0).getTotalSetTime()));*/
 		
 		CountDownTimer totalWorkoutTimer = setupTimer(mainSets);
 		totalWorkoutTimer.start();
@@ -125,17 +128,17 @@ public class DisplayWorkoutActivity extends ActionBarActivity
 			currentSet = mainSets.get(0);
 			currentRepTimeMillis = Long.valueOf(currentSet.getTimePerRep()) * 1000;
 			TextView totalCounTextView = (TextView) findViewById(R.id.txtViewTotalCountdown);
-			totalCounTextView.setText(formatMillisAsTime(millisInFuture));
-			TextView repCountTextView = (TextView) findViewById(R.id.txtViewSetCountdown);
-			repCountTextView.setText(formatMillisAsTime(currentSet.getTimePerRep()));
+			totalCounTextView.setText(WorkoutMaths.formatMillisAsTime(millisInFuture));
+			TextView repCountTextView = (TextView) findViewById(R.id.txtViewRepCountdown);
+			repCountTextView.setText(WorkoutMaths.formatMillisAsTime(currentSet.getTimePerRep()));
 		}
 
 		@Override
 		public void onTick(long millisUntilFinished) {
 			TextView totalCounTextView = (TextView) findViewById(R.id.txtViewTotalCountdown);
-			totalCounTextView.setText(formatMillisAsTime(millisUntilFinished));
+			totalCounTextView.setText(WorkoutMaths.formatMillisAsTime(millisUntilFinished));
 
-			TextView repCountTextView = (TextView) findViewById(R.id.txtViewSetCountdown);
+			TextView repCountTextView = (TextView) findViewById(R.id.txtViewRepCountdown);
 			Long remainingRepTimeMillis = currentRepTimeMillis - (timeLeftExcludingCurrentRep - Long.valueOf(millisUntilFinished));
 			
 			if(remainingRepTimeMillis <= 0)
@@ -173,17 +176,7 @@ public class DisplayWorkoutActivity extends ActionBarActivity
 				}
 			}
 			
-			repCountTextView.setText(formatMillisAsTime(remainingRepTimeMillis));
-		}
-
-		private String formatMillisAsTime(long millis)
-		{
-			long second = (millis / 1000) % 60;
-			long minute = (millis / (1000 * 60)) % 60;
-			long hour = (millis / (1000 * 60 * 60)) % 24;
-
-			String time = String.format("%02d:%02d:%02d", hour, minute, second);
-			return time;
+			repCountTextView.setText(WorkoutMaths.formatMillisAsTime(remainingRepTimeMillis));
 		}
 		
 		@Override

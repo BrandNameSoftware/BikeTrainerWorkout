@@ -1,0 +1,97 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.hudl.myfirstapp.DisplayWorkoutActivity"
+    android:orientation="vertical" >
+<!-- 	<TextView
+        android:id="@+id/lblViewTotalCountdown"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/lblTotalCountdownRemaining" /> -->
+	<TextView
+        android:id="@+id/txtViewTotalCountdown"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+	
+	    <TextView
+	        android:id="@+id/txtViewRepCountdown"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content" />
+	    
+		    <GridView 
+		        android:id="@+id/gridViewWorkoutSets"
+			    android:layout_width="match_parent"
+			    android:layout_height="match_parent"
+			    android:numColumns="auto_fit"
+			    android:verticalSpacing="3dp"
+			    android:horizontalSpacing="3dp"
+			    android:stretchMode="columnWidth"
+			    android:gravity="center"
+			    android:listSelector="@drawable/list_selector">
+		 	</GridView>
+
+       <!-- <TextView
+	        android:id="@+id/lblZone"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/lblZone" />
+        <TextView
+	        android:id="@+id/lblRepTime"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/lblRepTimeRemaining" />
+        <TextView
+	        android:id="@+id/lblFTP"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/lblFTP" />
+         <TextView
+	        android:id="@+id/lblHR"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/lblHR" />
+        <TextView
+	        android:id="@+id/lblRPM"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/lblRPM" /> -->
+        
+        
+	    <TextView
+	        android:id="@+id/txtViewZone"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content" />
+	    
+	    <TextView
+	        android:id="@+id/txtViewRepTime"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content" />
+	    
+	    
+	    <TextView
+	        android:id="@+id/txtViewFTP"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content" />
+	    <TextView
+	        android:id="@+id/txtViewReps"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content" />
+	    
+	    
+	  <!--  <TextView
+	        android:id="@+id/txtViewHR"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content" />
+	    
+	    
+	    <TextView
+	        android:id="@+id/txtViewRPM"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content" /> -->
+
+</LinearLayout>

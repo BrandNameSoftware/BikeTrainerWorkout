@@ -1,0 +1,34 @@
+package com.hudl.myfirstapp;
+
+import java.util.ArrayList;
+
+import com.hudl.workout.datacontainer.WorkoutSet;
+
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.BaseAdapter;
+
+public class WorkoutAdapter extends BaseAdapter {
+
+	private ArrayList<WorkoutSet> workoutSets = new ArrayList<WorkoutSet>();
+	public WorkoutAdapter(ArrayList<WorkoutSet> workoutSets) {
+		this.workoutSets = workoutSets;
+	}
+
+	@Override
+	public int getCount() {
+		return this.workoutSets.size();
+	}
+
+	@Override
+	public WorkoutSet getItem(int position) {
+		return workoutSets.get(position);
+	}
+
+	@Override
+	public View getView(int position, View convertView, ViewGroup parent) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

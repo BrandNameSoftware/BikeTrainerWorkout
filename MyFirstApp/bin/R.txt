@@ -347,7 +347,7 @@ int id action_menu_presenter 0x7f090006
 int id action_mode_bar 0x7f090030
 int id action_mode_bar_stub 0x7f09002f
 int id action_mode_close_button 0x7f090022
-int id action_settings 0x7f090046
+int id action_settings 0x7f090045
 int id activity_chooser_view_content 0x7f090023
 int id always 0x7f090014
 int id beginning 0x7f09001b
@@ -359,6 +359,7 @@ int id default_activity_button 0x7f090026
 int id dialog 0x7f090019
 int id disableHome 0x7f09000d
 int id dropdown 0x7f09001a
+int id editTxtTime 0x7f090043
 int id edit_query 0x7f090035
 int id end 0x7f09001c
 int id expand_activities_button 0x7f090024
@@ -394,7 +395,6 @@ int id showTitle 0x7f090012
 int id split_action_bar 0x7f090004
 int id submit_area 0x7f09003e
 int id tabMode 0x7f09000c
-int id time 0x7f090045
 int id title 0x7f090029
 int id top 0x7f09001f
 int id txtViewSetCountdown 0x7f090042
@@ -403,8 +403,7 @@ int id up 0x7f090001
 int id useLogo 0x7f090013
 int id withText 0x7f090018
 int id wrap_content 0x7f090009
-int id zone 0x7f090044
-int id zoneGrid 0x7f090043
+int id zoneGrid 0x7f090044
 int integer abc_max_action_buttons 0x7f080000
 int layout abc_action_bar_title_item 0x7f030000
 int layout abc_action_bar_up_container 0x7f030001

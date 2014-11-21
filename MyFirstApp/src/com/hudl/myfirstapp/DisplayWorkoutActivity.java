@@ -142,18 +142,18 @@ public class DisplayWorkoutActivity extends ActionBarActivity
 			{
 				if(isWorkingSet)
 				{
-					this.timeLeftExcludingCurrentRep -= this.currentSet.getTimePerRep();
+					this.timeLeftExcludingCurrentRep -= this.currentSet.getTimePerRep() * 1000;
 					remainingRepTimeMillis = Long.valueOf(currentSet.getRestTimePerRep()) * 1000;
 					currentRepTimeMillis = Long.valueOf(currentSet.getRestTimePerRep()) * 1000;
 					isWorkingSet = false;
 				}
 				else
 				{
-					this.timeLeftExcludingCurrentRep -= this.currentSet.getRestTimePerRep();
+					this.timeLeftExcludingCurrentRep -= this.currentSet.getRestTimePerRep() * 1000;
 					isWorkingSet = true;
 
 					currentRepNum++;
-					if(currentRepNum > currentSet.getNumberOfReps())
+					if(currentRepNum <= currentSet.getNumberOfReps())
 					{
 						remainingRepTimeMillis = Long.valueOf(currentSet.getTimePerRep()) * 1000;
 						currentRepTimeMillis = Long.valueOf(currentSet.getTimePerRep()) * 1000;
@@ -163,7 +163,7 @@ public class DisplayWorkoutActivity extends ActionBarActivity
 						currentSetIndex++;
 						currentRepNum = 1;
 						//just a safety precaution. This should never happen
-						if(mainSets.size() < currentSetIndex)
+						if(mainSets.size() > currentSetIndex)
 						{
 							currentSet = mainSets.get(currentSetIndex);
 							remainingRepTimeMillis = Long.valueOf(currentSet.getTimePerRep()) * 1000;

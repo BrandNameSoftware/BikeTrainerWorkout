@@ -1649,7 +1649,7 @@ containing a value of this type.
         public static final int action_mode_bar=0x7f090030;
         public static final int action_mode_bar_stub=0x7f09002f;
         public static final int action_mode_close_button=0x7f090022;
-        public static final int action_settings=0x7f090046;
+        public static final int action_settings=0x7f090045;
         public static final int activity_chooser_view_content=0x7f090023;
         public static final int always=0x7f090014;
         public static final int beginning=0x7f09001b;
@@ -1661,6 +1661,7 @@ containing a value of this type.
         public static final int dialog=0x7f090019;
         public static final int disableHome=0x7f09000d;
         public static final int dropdown=0x7f09001a;
+        public static final int editTxtTime=0x7f090043;
         public static final int edit_query=0x7f090035;
         public static final int end=0x7f09001c;
         public static final int expand_activities_button=0x7f090024;
@@ -1696,7 +1697,6 @@ containing a value of this type.
         public static final int split_action_bar=0x7f090004;
         public static final int submit_area=0x7f09003e;
         public static final int tabMode=0x7f09000c;
-        public static final int time=0x7f090045;
         public static final int title=0x7f090029;
         public static final int top=0x7f09001f;
         public static final int txtViewSetCountdown=0x7f090042;
@@ -1705,8 +1705,7 @@ containing a value of this type.
         public static final int useLogo=0x7f090013;
         public static final int withText=0x7f090018;
         public static final int wrap_content=0x7f090009;
-        public static final int zone=0x7f090044;
-        public static final int zoneGrid=0x7f090043;
+        public static final int zoneGrid=0x7f090044;
     }
     public static final class integer {
         /**  The maximum number of action buttons that should be permitted within

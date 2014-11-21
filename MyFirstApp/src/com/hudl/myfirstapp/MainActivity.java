@@ -1,12 +1,9 @@
 package com.hudl.myfirstapp;
 
-import java.io.IOException;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 
 import android.content.Intent;
-import android.content.res.AssetManager;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
@@ -15,19 +12,18 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
+import android.widget.EditText;
 import android.widget.GridView;
+import android.widget.TextView;
 import android.widget.Toast;
 
-import com.hudl.workout.ImportPrefs;
-import com.hudl.workout.WorkoutGenerator;
-import com.hudl.workout.datacontainer.WorkoutConstraints;
 import com.hudl.workout.datacontainer.WorkoutPrefs;
-import com.hudl.workout.datacontainer.WorkoutSet;
 
 public class MainActivity extends ActionBarActivity {
 	
 	List<String> list;
 	GridView grid;
+	int selectedZone = 0;
 	public final static String WORKOUT_PREFERENCES = "workoutPrefs";
 	public final static String WORKOUT_CONSTRAINTS = "workoutConstraints";
 
@@ -56,7 +52,7 @@ public class MainActivity extends ActionBarActivity {
 		@Override
 		public void onItemClick(AdapterView<?> arg0, View arg1, int arg2,
 				long arg3) {
-			// TODO Auto-generated method stub
+			selectedZone = arg2 + 1;
 				
 			Toast.makeText(getBaseContext(), list.get(arg2),
 				Toast.LENGTH_SHORT).show();
@@ -88,9 +84,12 @@ public class MainActivity extends ActionBarActivity {
     public void btnStartWorkout(View view)
     {
     	WorkoutPrefs prefs = new WorkoutPrefs();
-		
-		prefs.setTime(3600);
-		prefs.setZone(7);
+
+		EditText txtDesiredTime = (EditText) findViewById(R.id.editTxtTime);
+		int workouttime = Integer.valueOf(txtDesiredTime.getText().toString());
+    	
+		prefs.setTime(workouttime * 60);
+		prefs.setZone(selectedZone);
     	
     	
 		

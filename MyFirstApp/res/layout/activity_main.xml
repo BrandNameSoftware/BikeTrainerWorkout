@@ -8,6 +8,12 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".MainActivity" >
 	
+    <EditText android:id="@+id/editTxtTime"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/enter_time"
+        android:inputType="number" />
+    
      <GridView 
         android:id="@+id/zoneGrid"
         android:layout_width="fill_parent"
@@ -17,27 +23,14 @@
         android:background="#808080"
         android:gravity="top"
         android:columnWidth="50dp"
+        android:layout_below="@id/editTxtTime"
         android:stretchMode="columnWidth"  />
     
-    <EditText android:id="@+id/zone"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/enter_zone"
-        android:layout_gravity="center_vertical"
-        android:inputType="number"  
-        android:layout_below="@id/zoneGrid"  />
-    
-    <EditText android:id="@+id/time"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/zone"
-        android:hint="@string/enter_time"
-        android:inputType="number" />
     <Button 
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/button_send"
-        android:layout_below="@id/time"
+        android:layout_below="@id/zoneGrid"
         android:layout_centerInParent="true"
         android:onClick="btnStartWorkout"/>
     	

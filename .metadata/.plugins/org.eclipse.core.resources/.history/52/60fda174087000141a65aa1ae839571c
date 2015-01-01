@@ -1,8 +1,0 @@
-package com.hudl.workout;
-
-public class ImportPrefs {
-	public static WorkoutInfo ReadWorkoutPrefs()
-	{
-		
-	}
-}

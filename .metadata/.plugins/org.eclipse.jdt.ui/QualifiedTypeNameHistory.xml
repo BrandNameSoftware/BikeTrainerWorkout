@@ -9,7 +9,6 @@
 <fullyQualifiedTypeName name="java.lang.System"/>
 <fullyQualifiedTypeName name="java.lang.Math"/>
 <fullyQualifiedTypeName name="com.hudl.workout.datacontainer.WorkoutConstraints"/>
-<fullyQualifiedTypeName name="com.hudl.workout.utils.WorkoutMaths"/>
 <fullyQualifiedTypeName name="java.io.FileReader"/>
 <fullyQualifiedTypeName name="java.io.File"/>
 <fullyQualifiedTypeName name="java.io.InputStream"/>
@@ -22,13 +21,25 @@
 <fullyQualifiedTypeName name="android.content.Intent"/>
 <fullyQualifiedTypeName name="com.hudl.myfirstapp.MainActivity"/>
 <fullyQualifiedTypeName name="android.widget.TextView"/>
-<fullyQualifiedTypeName name="com.hudl.myfirstapp.R.id"/>
 <fullyQualifiedTypeName name="java.util.HashMap"/>
 <fullyQualifiedTypeName name="android.os.CountDownTimer"/>
 <fullyQualifiedTypeName name="com.hudl.myfirstapp.WorkoutCountDownTimer"/>
-<fullyQualifiedTypeName name="com.hudl.workout.datacontainer.WorkoutSet"/>
-<fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="java.text.SimpleDateFormat"/>
 <fullyQualifiedTypeName name="java.lang.Long"/>
 <fullyQualifiedTypeName name="android.widget.EditText"/>
+<fullyQualifiedTypeName name="com.hudl.workout.datacontainer.WorkoutSet"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="android.view.LayoutInflater"/>
+<fullyQualifiedTypeName name="android.content.Context"/>
+<fullyQualifiedTypeName name="com.hudl.myfirstapp.WorkoutAdapter"/>
+<fullyQualifiedTypeName name="com.hudl.workout.utils.WorkoutMaths"/>
+<fullyQualifiedTypeName name="android.widget.GridView"/>
+<fullyQualifiedTypeName name="com.hudl.myfirstapp.R.id"/>
+<fullyQualifiedTypeName name="android.app.Activity"/>
+<fullyQualifiedTypeName name="android.R"/>
+<fullyQualifiedTypeName name="android.widget.ListView"/>
+<fullyQualifiedTypeName name="com.brandNameSoftware.bikeTrainer.adapters.ZoneAdapter"/>
+<fullyQualifiedTypeName name="com.brandNameSoftware.workoutGenerator.datacontainer.WorkoutConstraints"/>
+<fullyQualifiedTypeName name="android.widget.Button"/>
+<fullyQualifiedTypeName name="com.brandNameSoftware.bikeTrainer.R.id"/>
 </qualifiedTypeNameHistroy>

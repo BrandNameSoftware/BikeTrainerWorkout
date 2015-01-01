@@ -2,4 +2,4 @@
 //org.eclipse.debug.core.PREFERRED_DELEGATES/org.eclipse.cdt.launch.attachLaunchType=org.eclipse.cdt.dsf.gdb.launch.attachCLaunch,debug
 //org.eclipse.debug.core.PREFERRED_DELEGATES/org.eclipse.cdt.launch.postmortemLaunchType=org.eclipse.cdt.dsf.gdb.launch.coreCLaunch,debug
 eclipse.preferences.version=1
-prefWatchExpressions=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?>\r\n<watchExpressions>\r\n<expression enabled\="true" text\="workoutSets.get(position).getTargetZone()"/>\r\n<expression enabled\="true" text\="txtViewZone.getText()"/>\r\n<expression enabled\="true" text\="txtViewZone.setText(workoutSets.get(position).getTargetZone().toString())"/>\r\n</watchExpressions>\r\n
+prefWatchExpressions=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?>\r\n<watchExpressions>\r\n<expression enabled\="true" text\="cardView.getChildAt(currentSetIndex)"/>\r\n<expression enabled\="true" text\="currentSetIndex"/>\r\n</watchExpressions>\r\n

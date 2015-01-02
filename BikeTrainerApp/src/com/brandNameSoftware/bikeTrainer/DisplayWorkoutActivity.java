@@ -3,17 +3,16 @@ package com.brandNameSoftware.bikeTrainer;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.CountDownTimer;
-import android.support.v7.widget.CardView;
+import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
+import android.view.WindowManager;
 import android.widget.TextView;
 
 import com.brandNameSoftware.bikeTrainer.adapters.WorkoutAdapter;
@@ -23,13 +22,14 @@ import com.brandNameSoftware.workoutGenerator.datacontainer.WorkoutPrefs;
 import com.brandNameSoftware.workoutGenerator.datacontainer.WorkoutSet;
 import com.brandNameSoftware.workoutGenerator.utils.WorkoutMaths;
 
-public class DisplayWorkoutActivity extends Activity
+public class DisplayWorkoutActivity extends ActionBarActivity
 {
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_display_workout);
+	    getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 		
 		Intent intent = getIntent();
 		WorkoutPrefs workoutPrefs = (WorkoutPrefs) intent.getSerializableExtra(MainActivity.WORKOUT_PREFERENCES);
@@ -187,6 +187,7 @@ public class DisplayWorkoutActivity extends Activity
 		public void onFinish() {
 			TextView totalCounTextView = (TextView) findViewById(R.id.txtViewTotalCountdown);
 			totalCounTextView.setText("Done!");
+		    getWindow().clearFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 
 		}
 

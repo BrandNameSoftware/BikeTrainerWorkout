@@ -3,52 +3,118 @@
        xmlns:card_view="http://schemas.android.com/apk/res-auto"
        android:id="@+id/card_view"
        android:layout_width="match_parent"
-       android:layout_height="match_parent"
+       android:layout_height="wrap_content"
        card_view:cardCornerRadius="5dp"
        android:layout_margin="5dp">
-       
     
-    
-	<LinearLayout android:layout_width="match_parent"
-		android:layout_height="match_parent"
+	<LinearLayout android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
 	    android:orientation="horizontal"
-	    android:padding="4sp" >
+       	android:padding="5sp" >
 	    
-	    <TextView
-	        android:id="@+id/txtViewZone"
+	    <LinearLayout android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+		    android:orientation="vertical"
+			android:paddingEnd="15sp"
+			android:layout_gravity="center" >
+	       	
+	       	<TextView
+		        android:id="@+id/txtViewZoneLbl"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:textColor="@color/fourth"
+		        android:textSize="12sp"
+		        android:text="@string/lblZone" />
+	       	
+		    <TextView
+		        android:id="@+id/txtViewZone"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:textColor="@color/fourth"
+		        android:textSize="50sp" />
+	    </LinearLayout>
+	    
+	    <LinearLayout android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+		    android:orientation="vertical" >
+	    
+		<RelativeLayout
 	        android:layout_width="wrap_content"
-	        android:layout_height="wrap_content"
-	        android:textColor="@color/fourth"
-	        android:textSize="40sp" />
-	    
+	        android:layout_height="wrap_content" >
+		    
+		    <TextView
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:text="@string/lblRepTime"
+	        	android:layout_centerVertical="true"
+	        	android:layout_alignParentStart="true"  />
+		    <TextView
+		        android:id="@+id/txtViewRepTime"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+	        	android:layout_centerVertical="true"
+	        	android:layout_alignParentEnd="true"
+	        	android:textSize="20sp" />
+		</RelativeLayout>
 	    <RelativeLayout
 	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content" >
 		    
+		    <TextView
+		        android:id="@+id/txtLblFTP"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:text="@string/lblFTP"
+	        	android:layout_centerVertical="true"
+	        	android:layout_alignParentStart="true"  />
 		    
 		    <TextView
 		        android:id="@+id/txtViewFTP"
 		        android:layout_width="wrap_content"
-		        android:layout_height="wrap_content"  />
+		        android:layout_height="wrap_content"
+	        	android:layout_alignParentEnd="true"
+	        	android:layout_centerVertical="true"
+	        	android:textSize="20sp"  />
+	    
+	    </RelativeLayout>
+		<RelativeLayout
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content" >
+		    
+		    <TextView
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:text="@string/lblHR"
+	        	android:layout_centerVertical="true"
+	        	android:layout_alignParentStart="true"  />
 		    
 		    <TextView
 		        android:id="@+id/txtViewHR"
 		        android:layout_width="wrap_content"
 		        android:layout_height="wrap_content" 
-		        android:layout_below="@id/txtViewFTP" />
+	        	android:layout_alignParentEnd="true"
+	        	android:layout_centerVertical="true"
+	        	android:textSize="20sp"  />
+		</RelativeLayout>		    
+		<RelativeLayout
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content" >
 		    
 		    <TextView
-		        android:id="@+id/txtViewRepTime"
 		        android:layout_width="wrap_content"
 		        android:layout_height="wrap_content"
-		        android:layout_below="@id/txtViewHR"/>
-		    
+		        android:text="@string/lblReps"
+	        	android:layout_centerVertical="true"
+	        	android:layout_alignParentStart="true"  />
 		    <TextView
 		        android:id="@+id/txtViewReps"
 		        android:layout_width="wrap_content"
-		        android:layout_height="wrap_content" 
-		        android:layout_below="@id/txtViewRepTime"/>
-	    
-	    </RelativeLayout>
+		        android:layout_height="wrap_content"
+	        	android:layout_alignParentEnd="true"
+	        	android:layout_centerVertical="true"
+	        	android:textSize="20sp" />
+		    </RelativeLayout>
+		    
+		    </LinearLayout>
 	</LinearLayout>
 </android.support.v7.widget.CardView>

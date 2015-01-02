@@ -5,11 +5,9 @@ import java.util.HashMap;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.RecyclerView.ViewHolder;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 
 import com.brandNameSoftware.bikeTrainer.R;
 import com.brandNameSoftware.workoutGenerator.datacontainer.WorkoutConstraints;
@@ -78,12 +76,12 @@ public class WorkoutAdapter extends RecyclerView.Adapter<WorkoutViewHolder> {
 	@Override
 	public void onBindViewHolder(WorkoutViewHolder viewHolder, int position) {
 		viewHolder.txtViewZone.setText(Integer.toString(workoutSets.get(position).getTargetZone()));
-		viewHolder.txtViewRepTime.setText("Time per rep: " + WorkoutMaths.formatMillisAsTime(workoutSets.get(position).getTimePerRep() * 1000));
+		viewHolder.txtViewRepTime.setText(WorkoutMaths.formatMillisAsTime(workoutSets.get(position).getTimePerRep() * 1000));
 		
 		WorkoutConstraints currentConstraint = workoutConstraints.get(workoutSets.get(position).getTargetZone());
-		viewHolder.txtViewFTP.setText("Power Zones: " + currentConstraint.getMinPower() + " - " + currentConstraint.getMaxPower());
-		viewHolder.txtViewReps.setText("Reps: " + workoutSets.get(position).getNumberOfReps());
-		viewHolder.txtViewHR.setText("HR Zones: " + currentConstraint.getHRRangeString());
+		viewHolder.txtViewFTP.setText(currentConstraint.getMinPower() + " - " + currentConstraint.getMaxPower());
+		viewHolder.txtViewReps.setText(Integer.toString(workoutSets.get(position).getNumberOfReps()));
+		viewHolder.txtViewHR.setText(currentConstraint.getHRRangeString());
 	}
 	
 	@Override

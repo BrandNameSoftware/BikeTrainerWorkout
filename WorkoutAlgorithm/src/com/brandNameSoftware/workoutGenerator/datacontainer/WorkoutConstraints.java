@@ -106,7 +106,7 @@ public class WorkoutConstraints implements Serializable {
 		}
 		else
 		{
-			hrRange = this.getMinHR() + " - " + this.getMaxHR();
+			hrRange = this.getMinHR() + " - " + this.getMaxHR() + "% Max HR";
 		}
 		
 		return hrRange;

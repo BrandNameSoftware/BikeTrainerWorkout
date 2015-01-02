@@ -1,2 +1,2 @@
 eclipse.preferences.version=1
-task-tag-projects-already-scanned=appcompat_v7,WorkoutAlgorithm,BikeTrainerApp
+task-tag-projects-already-scanned=WorkoutAlgorithm,BikeTrainerApp,TestActivity,cardview,android-support-v7-appcompat

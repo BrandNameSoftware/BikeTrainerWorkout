@@ -1,31 +1,31 @@
 package com.brandNameSoftware.bikeTrainer;
 
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.content.res.AssetManager;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.View.OnFocusChangeListener;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
-import android.widget.Toast;
 
 import com.brandNameSoftware.bikeTrainer.adapters.ZoneAdapter;
 import com.brandNameSoftware.workoutGenerator.ImportPrefs;
 import com.brandNameSoftware.workoutGenerator.datacontainer.WorkoutConstraints;
 import com.brandNameSoftware.workoutGenerator.datacontainer.WorkoutPrefs;
 
-public class MainActivity extends Activity {
+public class MainActivity extends ActionBarActivity {
 	
 	List<String> list;
 	ListView zoneList;
@@ -48,8 +48,21 @@ public class MainActivity extends Activity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position,long arg3)
             {
+
+                InputMethodManager imm = (InputMethodManager) view.getContext().getSystemService(Context.INPUT_METHOD_SERVICE);
+                imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
+                
                 view.setSelected(true);
+                
+                //deselect the previous selection
+                if(selectedZone > 0)
+                {
+                	zoneList.getChildAt(selectedZone - 1).setBackgroundColor(getResources().getColor(R.color.transparent));
+                }
+                
                 selectedZone = position + 1; //zones aren't 0 indexed
+            	zoneList.getChildAt(selectedZone - 1).setBackgroundColor(getResources().getColor(R.color.accent));
+                
                 EditText txtDesiredTime = (EditText) findViewById(R.id.editTxtTime);
         		Button startWorkoutBtn = (Button) findViewById(R.id.btnStartWorkout);
         		String timeText = txtDesiredTime.getText().toString().trim();
@@ -63,6 +76,19 @@ public class MainActivity extends Activity {
             	}
             }
         });
+        
+        EditText editText = (EditText) findViewById(R.id.editTxtTime);
+        editText.setOnFocusChangeListener(new OnFocusChangeListener() {
+			
+			@Override
+			public void onFocusChange(View v, boolean hasFocus) {
+				if(v.getId() == R.id.editTxtTime && !hasFocus) {
+		            InputMethodManager imm =  (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+		            imm.hideSoftInputFromWindow(v.getWindowToken(), 0);
+		        }
+				
+			}
+		});
     }
 
 

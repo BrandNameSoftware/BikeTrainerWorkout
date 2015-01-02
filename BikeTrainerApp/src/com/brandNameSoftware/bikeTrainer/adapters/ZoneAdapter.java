@@ -49,7 +49,7 @@ public class ZoneAdapter extends BaseAdapter {
 			
 			txtViewZoneHeader.setText("Zone " + currentConstraint.getZone());
 			txtViewZoneDetails.setText("Power - " + currentConstraint.getMinPower() + "-" + currentConstraint.getMaxPower() + "% FTP    HR - " + 
-					currentConstraint.getHRRangeString() + "% Max HR");
+					currentConstraint.getHRRangeString());
 		}
 		else
 		{

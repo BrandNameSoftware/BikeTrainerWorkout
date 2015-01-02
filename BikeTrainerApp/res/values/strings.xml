@@ -20,6 +20,7 @@
     <string name="lblFTP">FTP</string>
     <string name="lblHR">HR</string>
     <string name="lblRPM">RPM</string>
+    <string name="lblReps">Reps</string>
     <string name="lblRepTime">Rep time</string>
 
 </resources>

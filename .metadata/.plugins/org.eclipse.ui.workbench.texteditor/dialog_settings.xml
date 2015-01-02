@@ -6,22 +6,23 @@
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="rand" key="selection"/>
+		<item value="Done" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="done"/>
+			<item value="parent"/>
+			<item value="25sp"/>
+			<item value="25"/>
+			<item value="System.out.println"/>
 			<item value="rand"/>
 			<item value="random"/>
 			<item value="repCountTextView"/>
-			<item value="totalCounTextView"/>
-			<item value="txtViewRepCountdown"/>
-			<item value="btnStartWorkout"/>
-			<item value="scroll"/>
-			<item value="generateMainSets"/>
 		</list>
 		<list key="replacehistory">
+			<item value="20sp"/>
 			<item value="-1"/>
 		</list>
 	</section>

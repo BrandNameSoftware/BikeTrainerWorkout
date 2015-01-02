@@ -8,5 +8,6 @@
 	<classpathentry combineaccessrules="false" exported="true" kind="src" path="/WorkoutAlgorithm"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/cardview"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/TestActivity"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/android-support-v7-appcompat"/>
 	<classpathentry kind="output" path="bin/classes"/>
 </classpath>

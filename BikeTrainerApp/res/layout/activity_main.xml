@@ -28,10 +28,11 @@
 	        android:choiceMode="singleChoice"
 	        android:columnWidth="50dp"
 	        android:gravity="top"
-	        android:listSelector="@color/accent"
 	        android:numColumns="1"
 	        android:stretchMode="columnWidth"
-	        android:verticalSpacing="0dp" />
+	        android:verticalSpacing="0dp"
+	        android:focusable="true"
+   			android:focusableInTouchMode ="true" />
 
 	    <Button
 	        android:id="@+id/btnStartWorkout"

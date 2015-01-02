@@ -17,8 +17,7 @@
 	        android:layout_height="wrap_content"
 	        android:textColor="@color/light_text"
 	        android:textSize="40sp"
-	        android:layout_alignParentStart="true"
-	        />
+	        android:layout_alignParentStart="true" />
         
 		<TextView
 		    android:id="@+id/txtViewTotalCountdown"
